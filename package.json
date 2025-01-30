@@ -3,12 +3,15 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "build": "bun build ./index.ts --outdir ./dist"
+    "build": "bun build ./index.ts --outdir ./dist && cp ./index.html ./dist"
   },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "fraction.js": "^5.2.1"
   }
 }
