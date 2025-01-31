@@ -25,10 +25,41 @@
   margin: 5px;
 }
 
-.input-container input,label {
+.input-container input,
+label {
   margin-right: 10px;
 }
 
 #duration::after {
   content: "ms";
+}
+
+.simulation-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  padding: 5px;
+}
+
+#matrix-container {
+  margin: 5px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.button-container button {
+  font-size: 1.1rem;
+  min-width: 150px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.separator {
+  height: 2px;
+  background-color: #ccc;
+  margin: 20px 0;
 }
