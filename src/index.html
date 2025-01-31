@@ -11,13 +11,6 @@
       <input type="file" name="input-file" id="input-file" accept=".csv" />
       <button id="button-read">読み込み</button>
     </div>
-    <div class="setting-container">
-      <div id="input-precision-container" class="input-container">
-        <label for="input-precision">有効数字: </label>
-        <input type="range" id="input-precision" min="3" max="10" value="5" />
-        <div><span id="precision">5</span></div>
-      </div>
-    </div>
     <div class="separator"></div>
     <div class="simulation-container">
       <div id="matrix-container"></div>
@@ -40,6 +33,11 @@
           <label for="input-error">誤差: </label>
           <input type="range" id="input-error" min="-15" max="-3" value="-6" step="1" />
           <div>ε = <span id="error">1e-6</span></div>
+        </div>
+        <div id="input-precision-container" class="input-container">
+          <label for="input-precision">有効数字: </label>
+          <input type="range" id="input-precision" min="3" max="10" value="5" />
+          <div><span id="precision">5</span></div>
         </div>
         <div class="separator"></div>
         <button id="button-reset">リセット</button>

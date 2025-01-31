@@ -8,7 +8,6 @@ const DEFAULT_DURATION = 500;
 const DEFAULT_ERROR = 1e-6;
 
 const main = () => {
-  console.log("Hello World");
   const $inputFile = mustQuerySelector<HTMLInputElement>("#input-file");
   const $buttonRead = mustQuerySelector<HTMLButtonElement>("#button-read");
   const $inputPrecision = mustQuerySelector<HTMLInputElement>("#input-precision");
@@ -35,9 +34,13 @@ const main = () => {
       return;
     }
     const csv = await fetchFile(files[0]);
-    data = parseCSVAsNumber(csv);
-    matrix = Matrix.fromData(data);
-    displayMatrix(matrix, precision);
+    try {
+      data = parseCSVAsNumber(csv);
+      matrix = Matrix.fromData(data);
+      displayMatrix(matrix, precision);
+    } catch (e) {
+      alert(`CSVファイルが不正です: ${e}`);
+    }
   });
 
   let precision = DEFAULT_PRECISION;
