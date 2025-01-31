@@ -1,15 +1,23 @@
 # shinkhorn-simulator
 
-To install dependencies:
+A simulator for the Shinkhorn algorithm.
+
+## install
+
+```bash
+git clone https://github.com/hamao0820/shinkhorn-simulator.git
+```
 
 ```bash
 bun install
 ```
 
-To run:
+## build
 
 ```bash
-bun run index.ts
+bun run build
 ```
 
-This project was created using `bun init` in bun v1.1.6. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## how to use
+
+open `./dist/index.html` in your browser.
