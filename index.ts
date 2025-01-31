@@ -111,18 +111,26 @@ const main = () => {
     $buttonColScaling.disabled = true;
     $buttonReset.disabled = true;
 
-    while (!matrix.isScaled(error)) {
+    while (true) {
+      // 行スケーリング
       matrix.rowScaling();
       displayMatrix(matrix, precision);
+      if (matrix.isScaled(error)) {
+        break;
+      }
       if (!(await sleep(duration, abortController))) {
         break;
       }
+
+      // 列スケーリング
       matrix.colScaling();
       displayMatrix(matrix, precision);
+      if (matrix.isScaled(error)) {
+        break;
+      }
       if (!(await sleep(duration, abortController))) {
         break;
       }
-      console.log(error);
     }
 
     $buttonAutoScaling.disabled = false;
