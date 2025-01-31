@@ -1,4 +1,3 @@
-// TODO: Fraction.jsで分数計算を行うように変更する
 class Matrix {
   private matrix: number[][];
   private readonly size: number;

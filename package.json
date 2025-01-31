@@ -11,8 +11,5 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "fraction.js": "^5.2.1"
   }
 }
