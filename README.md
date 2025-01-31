@@ -1,8 +1,8 @@
 # shinkhorn-simulator
 
-A simulator for the Shinkhorn algorithm.
+Shinkhorn のアルゴリズムを可視化するためのシミュレータです。
 
-## install
+## インストール
 
 ```bash
 git clone https://github.com/hamao0820/shinkhorn-simulator.git
@@ -12,12 +12,18 @@ git clone https://github.com/hamao0820/shinkhorn-simulator.git
 bun install
 ```
 
-## build
+## ビルド
 
 ```bash
 bun run build
 ```
 
-## how to use
+## 使い方
 
-open `./dist/index.html` in your browser.
+1. `./dist/index.html` をブラウザで開く。
+2. csv ファイルをアップロードし、読み込みボタンを押す。csv ファイルは正方行列である必要があります。
+3. 行、列と書かれたボタンを押すと、行スケーリング、列スケーリングが行われます。
+4. 自動と書かれたボタンを押すと、自動で行スケーリング、列スケーリングが交互に行われます。
+   - スライダーでスケーリングの速度、収束判定の閾値を調整できます。
+5. 自動実行を停止する場合は、停止と書かれたボタンを押してください。
+6. リセットと書かれたボタンを押すと、行列の初期状態に戻ります。
